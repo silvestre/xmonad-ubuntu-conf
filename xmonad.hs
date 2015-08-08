@@ -32,6 +32,7 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.UrgencyHook
 import XMonad.Hooks.ICCCMFocus
 import XMonad.Actions.GridSelect
+import qualified XMonad.Actions.FlexibleResize as Flex
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 import Data.Ratio ((%))
@@ -331,6 +332,10 @@ myKeys = myKeyBindings ++
   ]
 
 
+-- Custom mouse bindings
+
+myMouse = [ ((mod4Mask, button3), (\w -> focus w >> Flex.mouseResizeWindow w)) ]
+
 {-
   Here we actually stitch together all the configuration settings
   and run xmonad. We also spawn an instance of xmobar and pipe
@@ -366,4 +371,4 @@ main = do
         . wrap myUrgentWSLeft myUrgentWSRight
     }
   }
-    `additionalKeys` myKeys
+    `additionalKeys` myKeys `additionalMouseBindings` myMouse
