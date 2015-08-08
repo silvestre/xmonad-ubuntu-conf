@@ -40,19 +40,19 @@ Config {
     ] 10,
 
     -- Date formatting
-    Run Date "%a %b %_d %l:%M" "date" 10,
+    Run Date "%a %-d. %b %_H:%M" "date" 10,
 
     -- Battery information. This is likely to require some customization
     -- based upon your specific hardware. Or, for a desktop you may want
     -- to just remove this section entirely.
-    Run Battery [
-      "-t", "<acstatus>: <left>%", 
-      "--", 
-      "-O", "AC",
-      "-o", "Bat",
-      "-h", "green",
-      "-l", "red"
-    ] 10,
+--    Run Battery [
+--      "-t", "<acstatus>: <left>%", 
+--      "--", 
+--      "-O", "AC",
+--      "-o", "Bat",
+--      "-h", "green",
+--      "-l", "red"
+--    ] 10,
 
     -- To get volume information, we run a custom bash script.
     -- This is because the built-in volume support in xmobar is disabled
