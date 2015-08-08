@@ -172,7 +172,7 @@ gimpLayout = smartBorders(avoidStruts(ThreeColMid 1 (3/100) (3/4)))
 -- layouts.
 myLayouts =
   onWorkspace "7:Chat" chatLayout
-  $ onWorkspace "9:Pix" gimpLayout
+  -- $ onWorkspace "9:Pix" gimpLayout
   $ defaultLayouts
 
 
