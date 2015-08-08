@@ -69,3 +69,6 @@ cat /dev/null | ssh-add &
 # device
 TOUCHPAD_ID=`xinput | grep 'Synaptics TouchPad' | cut -f 2 | cut -f 2 -d =`
 xinput set-prop $TOUCHPAD_ID "Device Enabled" 0
+setxkbmap "us(altgr-intl)"
+setxkbmap -option ""
+setxkbmap -option "caps:escape"
